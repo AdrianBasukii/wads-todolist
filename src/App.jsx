@@ -3,9 +3,9 @@ import './styles.css';
 
 function CreateListItem({onAdd}){
   return(
-    <div className="listItemForm">
-      <input id="textInput" className="textInput" type="text"></input>
-      <button className="addButton" onClick={onAdd}>+</button>
+    <div className="flex gap-10">
+      <input id="textInput" className="w-xl h-10 border-b py-8 px-2 focus:border-blue-500 focus:ring-0 outline-none transition-all" type="text" placeholder='Input here'></input>
+      <button className="text-3xl hover:cursor-pointer" onClick={onAdd}>+</button>
     </div>
   );
 }
@@ -13,23 +13,22 @@ function CreateListItem({onAdd}){
 function ToDoList({itemList, onDelete}){
   return (
     <>
-      <div className="toDoList">
-      {itemList.length === 0 ? (
-        <div className="toDoItem">
-          <h2>To Do List Empty!</h2>
-        </div>
-      ) : (
-        itemList.map((item, index) => (
-            <div className="toDoItem" key={index}>
-              <label className="checkbox-container">
-                <input type="checkbox"></input>
-                <span className="checkmark"></span>
-              </label>
-              <h3>{item}</h3>
-              <button onClick={() => onDelete(index)}>Delete</button>
-            </div>
-        ))
-      )}
+      <div className="mt-8 h-full">
+        {itemList.length === 0 ? (
+          <div>
+          </div>
+        ) : (
+          itemList.map((item, index) => (
+              <div className="flex justify-between items-center mb-10" key={index}>
+                <label className="checkbox-container">
+                  <input type="checkbox"></input>
+                  <span className="checkmark"></span>
+                </label>
+                <h3>{item}</h3>
+                <button className="bg-red-900 p-2 rounded-sm text-sm hover:cursor-pointer" onClick={() => onDelete(index)}>Delete</button>
+              </div>
+          ))
+        )}
       </div>
     </>
   );
@@ -59,9 +58,11 @@ export default function MainPage(){
   }
 
   return(
-  <>
-    <CreateListItem onAdd={handleAdd}/>
-    <ToDoList itemList={items} onDelete={handleDelete}/>
-  </>
+  <div className="bg-neutral-950 text-white w-full min-h-screen flex justify-center items-center">
+    <div className="max-w-7xl m-auto overflow-y-auto">
+      <CreateListItem onAdd={handleAdd}/>
+      <ToDoList itemList={items} onDelete={handleDelete}/>
+    </div>
+  </div>
   ); 
 }

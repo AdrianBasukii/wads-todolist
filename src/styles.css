@@ -1,51 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-
-body {
-    background:black;
-    color: white;
-    margin: 0;
-}
-
-.listItemForm{
-    max-width: 600px;
-    margin: 5rem auto;
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-}
-
-.textInput{
-    width: 500px;
-    height: 50px;
-    border-radius: 25px;
-    padding: 15px;
-}
-
-.addButton{
-    height: 50px;
-    width: 50px;
-    border-radius: 50px;
-}
-
-.addButton:hover{
-    cursor: pointer;
-}
-
-.toDoList{
-    max-width: 550px;
-    margin: auto;
-}
-
-.toDoItem{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
+@import "tailwindcss";
 
 .checkbox-container{
     display: block;
@@ -98,4 +51,24 @@ body {
     border: solid white;
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+::-webkit-scrollbar-track {
+background: oklch(0.145 0 0);
+}
+
+
+::-webkit-scrollbar-thumb {
+background: #1f1f1f;
+border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+background: #2b2b2b;
 }

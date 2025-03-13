@@ -34,11 +34,11 @@ npm run dev
 
 1. Go to Firebase console and create a new app
 2. Once you have reached the dashboard, go to authentication, add new providers, and select the following options:
-<img src="./readme_images/auth.png" width="300">
+<img src="./readme_images/auth.png" width="600">
 
 3. After configuring the authentication settings, go to Firestore Database > Indexes and add these two indexes 
-<img src="./readme_images/index1.png" width="300">
-<img src="./readme_images/index2.png" width="300">
+<img src="./readme_images/index1.png" width="600">
+<img src="./readme_images/index2.png" width="600">
 
 These will be used in querying the database for retrieving the to-do items per user. 
 

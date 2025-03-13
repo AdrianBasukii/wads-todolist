@@ -30,6 +30,20 @@ npm run dev
 
 <br>
 
+## Firebase Config
+
+1. Go to Firebase console and create a new app
+2. Once you have reached the dashboard, go to authentication, add new providers, and select the following options:
+<img src="./readme_images/auth.png" width="300">
+
+3. After configuring the authentication settings, go to Firestore Database > Indexes and add these two indexes 
+<img src="./readme_images/index1.png" width="300">
+<img src="./readme_images/index2.png" width="300">
+
+These will be used in querying the database for retrieving the to-do items per user. 
+
+<br>
+
 ## Deployment
 This app is also deployed on Vercel:  https://wads-todoapp.vercel.app/
 

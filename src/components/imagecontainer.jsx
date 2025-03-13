@@ -1,4 +1,5 @@
 import Circles from "./circles"
+import landingImage from "../assets/landing_image.png";
 
 export default function ImageContainer(){
     return(
@@ -8,7 +9,7 @@ export default function ImageContainer(){
                 <Circles />
                 <h1 className="text-neutral-400 text-sm">To-Do App Image</h1>
             </div>
-            <img className="w-full rounded-bl-xl rounded-br-xl border-b-2 border-r-2 border-l-2 border-neutral-900" src="src/assets/landing_image.png" alt="to-do app image" />
+            <img className="w-full rounded-bl-xl rounded-br-xl border-b-2 border-r-2 border-l-2 border-neutral-900" src={landingImage} alt="to-do app image" />
         </div>
     )
 }

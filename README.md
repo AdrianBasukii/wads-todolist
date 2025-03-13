@@ -48,6 +48,7 @@ These will be used in querying the database for retrieving the to-do items per u
 This app is also deployed on Vercel:  https://wads-todoapp.vercel.app/
 
 <br>
+
 ## Tools:
 * ReactJS Framework -> Main framework
 * TailwindCSS Framework -> Styling

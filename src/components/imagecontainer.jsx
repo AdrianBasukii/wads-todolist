@@ -2,13 +2,13 @@ import Circles from "./circles"
 
 export default function ImageContainer(){
     return(
-        <div className="border-2 border-neutral-900 rounded-xl w-full md:w-160 flex flex-wrap gap-6">
+        <div className="w-full flex flex-wrap">
             
-            <div className="flex justify-between items-center border-b-2 border-neutral-900 p-4 w-full">
+            <div className="flex justify-between items-center rounded-tl-xl rounded-tr-xl border-2 border-neutral-900 p-4 w-full">
                 <Circles />
                 <h1 className="text-neutral-400 text-sm">To-Do App Image</h1>
             </div>
-            <div className="mx-auto w-15/16 h-84 bg-[url(src/assets/landing_image.png)] bg-center rounded-md"></div>
+            <img className="w-full rounded-bl-xl rounded-br-xl border-b-2 border-r-2 border-l-2 border-neutral-900" src="src/assets/landing_image.png" alt="to-do app image" />
         </div>
     )
 }

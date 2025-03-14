@@ -7,8 +7,11 @@ import ToDoContainer from "../components/todoapp/ToDoContainer";
 import ToDoHeader from "../components/todoapp/ToDoHeader";
 import PageWrapper from "../components/pagewrapper";
 import ToDoWrapper from "../components/todoapp/ToDoWrapper";
+import LoadingScreen from "../components/loadingScreen";
 
 export default function ToDoList(){
+
+    // Fetching user data
     const [name, setName] = useState("");
     const [user, loading, error] = useAuthState(auth)
     const fetchUserName = async () => {
@@ -32,12 +35,14 @@ export default function ToDoList(){
       }, [user, loading])
 
     return(
-      <PageWrapper>
-        <ToDoWrapper>
-          <ToDoHeader username={name} logout={logout}/>
-          <ToDoContainer/>
-        </ToDoWrapper>
-      </PageWrapper>
-        
+      <>{loading 
+        ? <LoadingScreen/>
+        : <PageWrapper>
+          <ToDoWrapper>
+            <ToDoHeader username={name} logout={logout}/>
+            <ToDoContainer/>
+          </ToDoWrapper>
+        </PageWrapper>}
+      </>
     )
 }

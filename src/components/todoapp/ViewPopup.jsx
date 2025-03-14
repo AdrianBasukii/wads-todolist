@@ -12,7 +12,7 @@ export default function ViewPopup({popupStatus, handleViewPopup, title, descript
                     </div>
                     <div>
                         {description
-                        ?<p className="p-4">{description}</p>
+                        ?<p className="p-4 whitespace-pre-line">{description}</p>
                         :<p className="text-neutral-600 p-4">No description added</p>}                  
                     </div>
                 </div>

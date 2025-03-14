@@ -38,12 +38,13 @@ export default function AddPopup({popupStatus, handleAddPopup}) {
             <PopupContainer>
                 <div className="w-15/16 max-w-[600px] bg-neutral-900 rounded-md">
                     <div className="w-full border-b border-neutral-800 p-4 flex justify-between">
-                        <input className="text-2xl rounded py-1 px-2 border border-neutral-800" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Insert Title"/>
+                        <h1>Add Item</h1>
                         <button className="cursor-pointer" onClick={handleAddPopup}><IoClose size={25}/></button>
                     </div>
                     <div className="w-full flex flex-wrap justify-center gap-4 p-4">
+                        <input className="w-full text-xl rounded py-1 px-2 border border-neutral-800" value={title} onChange={(e) => setTitle(e.target.value)} placeholder="Insert Title"/>
                         <textarea className="resize-none w-full h-32 p-2 rounded border border-neutral-800" value={description} onChange={(e) => setDesc(e.target.value)} placeholder="Write a description..."></textarea>
-                        <button className="bg-blue-600 py-2 w-64 rounded-md mx-auto hover:cursor-pointer" onClick={handleAdd}>Create</button>
+                        <button className="bg-blue-600 py-2 mt-8 w-64 rounded-md mx-auto hover:cursor-pointer" onClick={handleAdd}>Create</button>
                     </div>
                 </div>
             </PopupContainer>

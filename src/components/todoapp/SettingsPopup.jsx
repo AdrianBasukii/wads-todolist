@@ -31,8 +31,16 @@ export default function SettingsPopup({username, profPic, popupStatus, handlePop
             if(newPass != "" && newPassConf != "" && newPass === newPassConf){
                 await updatePassword(auth.currentUser, newPass);
             }
-      
-            alert("Profile updated successfully!");
+            else if(newPass != newPassConf){
+                alert("Password Mismatch")
+            }
+            else if(newPass === "" || newPassConf === "" ){
+                alert("Empty Field")
+            }
+            else{
+                alert("Profile updated successfully!");
+            }
+            
         } catch (err) {
           console.error("Error updating name:", err);
           alert(err.message);

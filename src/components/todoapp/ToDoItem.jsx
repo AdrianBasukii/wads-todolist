@@ -95,7 +95,7 @@ export default function ToDoItem({title, description, completed, id}) {
                         </label>
                     </div> 
 
-                    <h1>{title}</h1>
+                    <h1 className="w-3/4 truncate">{title}</h1>
                 </div>
                 <div className="flex items-center gap-4">
                     <button className="hover:cursor-pointer bg-blue-600 rounded-sm h-6 px-2 text-sm" onClick={handleViewPopup}>View</button>

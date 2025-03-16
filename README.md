@@ -33,9 +33,12 @@ npm run dev
 ## Firebase Config
 
 1. Go to Firebase console and create a new app
+
 2. Once you have reached the dashboard, go to authentication, add new providers, and select the following options:
 <img src="./readme_images/auth.png" width="600">
+
 3. Go to the FirestoreDB page and setup the database with test mode for development
+ 
 4. After configuring the authentication settings, go to Firestore Database > Indexes and add this index
 <img src="./readme_images/index1.png" width="600">
 
